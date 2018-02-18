@@ -17,11 +17,9 @@ export default class Header extends Component {
 				<a href="#" title="Inky" id="inky-logo"><i className="fa fa-paper-plane" /></a>
 
 				<ul id="inky-nav" className="nav unstyle">
-						<div>
-							<li className="nav-item pull-right"><Link to='/myartboards'>My Artboards</Link></li>
-							<li className="nav-item pull-right"><Link to='/artboard'>Artboard</Link></li>
-							<li className="nav-item pull-right"><Link to='/settings'>Settings</Link></li>
-						</div>
+					<li className="nav-item pull-right" title="Inky Settings"><Link to='/settings'><i className="fa fa-cog" /></Link></li>
+					<li className="nav-item pull-right"><Link to='/myartboards'>My Artboards</Link></li>
+					<li className="nav-item pull-right"><Link to='/artboard'>Artboard</Link></li>
 				</ul>
 
 			</div>

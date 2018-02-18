@@ -12,8 +12,9 @@ export default class Settings extends Component {
 	render() {
 		return (
 			<div id="inky-settings" className="content">
-				<h1>Settings Page</h1>
-				<h3>Appearance</h3>
+				<h1>Inky Settings</h1>
+				<h3 className="label">General Settings</h3>
+				<h3 className="label">Appearance</h3>
 			</div>
 		)
 	}

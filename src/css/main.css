@@ -83,21 +83,40 @@ div#inky-artboard canvas#artboard {
 	margin:  0 auto;
 	display:  block;
 }
-/**/
+/* Header nav */
 ul#inky-nav {
-    display:  inline;
-    float: right;
-    margin:  0;
-    padding:  0;
-    font-size:  18px;
+	display:  inline;
+	float: right;
+	margin: 7px 0 0;
+	padding:  0;
+	font-size:  18px;
+	vertical-align:  middle;
 }
 .nav {
 	display: inline;
 }
 .nav .nav-item {
 	display:  inline;
-	padding: 5px 15px;
 }
-.nav .nav-item:hover {
+.nav .nav-item a {
+	padding: 5px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.nav .nav-item a:hover {
 	background: #eee;
+}
+.nav-item a {
+    font-weight:  bold;
+}
+.nav-item a:hover i.fa.fa-cog {
+	animation: spin 2s infinite .3s;
+}
+@keyframes spin {
+	from, 0% {
+		transform: rotateZ(0deg);
+	}
+	to, 100% {
+		transform: rotateZ(360deg);
+	}
 }

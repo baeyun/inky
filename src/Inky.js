@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import Header from './Header'
 import Settings from './Settings'
@@ -18,15 +18,15 @@ export default class Inky extends Component {
 	render() {
 		return (
 			<div id="inky">
-				{/*<Switch>
-									<Route path={'/'} component={MyArtBoards} />
-									<Route path={'/settings'} component={Settings} />
-									<Route path={'/artboard'} component={ArtBoard} />
-								</Switch>*/}
-
+			
 				<Header />
+				
+				<Switch>
+					<Route path={'/'} component={Settings} />
+					<Route path={'/settings'} component={MyArtBoards} />
+					<Route path={'/artboard'} component={ArtBoard} />
+				</Switch>
 
-				<ArtBoard />
 
 			</div>
 		)
