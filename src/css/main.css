@@ -32,18 +32,6 @@ div#inky-header #inky-logo {
 div#inky-header #inky-logo i {
 	color: #5ce794;
 }
-/* Actions Menu */
-.inky-menu-list {
-	list-style:  none;
-	display:  inline;
-}
-.inky-menu-list .list-item {
-	display:  inline;
-	padding: 5px 15px;
-}
-.inky-menu-list .list-item:hover {
-	background: #eee;
-}
 /* Actions Panel */
 div#inky-action-bar {
 	position:  absolute;
@@ -63,6 +51,7 @@ div#inky-action-bar {
 	padding: 9.5px 14px;
 	width: 50px;
 	height: 50px;
+	cursor: pointer;
 }
 .action-item:hover {
     background:  #eee;
@@ -81,8 +70,30 @@ div#inky-artboard canvas#artboard {
 	max-width: 90%;
 	cursor: pointer;
 }
+/* Settings */
+
 /* Misc */
 .pull-right { float: right; }
 .pull-left { float: left; }
 .item-vertical { display: block; }
-.unstyle {list-style: none;margin: 0;padding: 0;}
+.unstyle {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	width: 960px;
+	margin:  0 auto;
+	display:  block;
+}
+/**/
+.nav {
+	display: inline;
+}
+.nav .nav-item {
+	display:  inline;
+	padding: 5px 15px;
+}
+.nav .nav-item:hover {
+	background: #eee;
+}

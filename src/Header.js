@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
 	constructor(props) {
@@ -15,12 +16,13 @@ export default class Header extends Component {
 
 				<a href="#" title="Inky" id="inky-logo"><i className="fa fa-paper-plane" /></a>
 
-				{/*<ul id="inky-actions-menu" className="inky-menu-list">
-									<li className="list-item"><a href="javascript:void(0)">File</a></li>
-									<li className="list-item"><a href="javascript:void(0)">Edit</a></li>
-									<li className="list-item pull-right"><a href="javascript:void(0)">Settings</a></li>
-									<li className="list-item pull-right"><a href="javascript:void(0)">Account</a></li>
-								</ul>*/}
+				<ul id="inky-nav" className="nav unstyle">
+						<div>
+							<li className="nav-item pull-right"><Link to='/myartboards'>My Artboards</Link></li>
+							<li className="nav-item pull-right"><Link to='/artboard'>Artboard</Link></li>
+							<li className="nav-item pull-right"><Link to='/settings'>Settings</Link></li>
+						</div>
+				</ul>
 
 			</div>
 		)

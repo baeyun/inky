@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import ArtBoard from './ArtBoard'
+import { Switch, Route } from 'react-router-dom'
+
 import Header from './Header'
-import ActionsPanel from './ActionsPanel'
-import ArtBoardCtrl from './js/ArtBoardCtrl'
+import Settings from './Settings'
+import MyArtBoards from './MyArtBoards'
+import ArtBoard from './ArtBoard'
 
 export default class Inky extends Component {
 	constructor(props) {
@@ -11,17 +13,21 @@ export default class Inky extends Component {
 
 	componentWillMount() {}
 
-	componentDidMount() {
-		// When all components are loaded to current...
-		let artBoardController = new ArtBoardCtrl()
-	}
+	componentDidMount() {}
 
 	render() {
 		return (
 			<div id="inky">
+				{/*<Switch>
+									<Route path={'/'} component={MyArtBoards} />
+									<Route path={'/settings'} component={Settings} />
+									<Route path={'/artboard'} component={ArtBoard} />
+								</Switch>*/}
+
 				<Header />
-				<ActionsPanel />
+
 				<ArtBoard />
+
 			</div>
 		)
 	}
