@@ -1,0 +1,88 @@
+* {
+	font-family: "Calibri", sans-serif;
+	user-select: none !important;
+	outline: none;
+	color: #444;
+	box-sizing:  border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #f7f7f7;
+	max-height:  100vh;
+	min-height: 100vh;
+	overflow:  hidden;
+}
+a {
+	text-decoration: none;
+}
+/* Header */
+div#inky-header {
+    padding: 0;
+    background: #fff;
+}
+div#inky-header * {
+    padding: 10px 15px;
+}
+div#inky-header #inky-logo {
+	font-size: 28px;
+	padding: 0;
+	margin:  0;
+}
+div#inky-header #inky-logo i {
+	color: #5ce794;
+}
+/* Actions Menu */
+.inky-menu-list {
+	list-style:  none;
+	display:  inline;
+}
+.inky-menu-list .list-item {
+	display:  inline;
+	padding: 5px 15px;
+}
+.inky-menu-list .list-item:hover {
+	background: #eee;
+}
+/* Actions Panel */
+div#inky-action-bar {
+	position:  absolute;
+	left: 0;
+	bottom:  0;
+	top: 48px;
+	background-color: #fff;
+	width:  50px;
+}
+.action-group + .action-group {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+.action-item {
+	font-size:  25px;
+	padding: 9.5px 14px;
+	width: 50px;
+	height: 50px;
+}
+.action-item:hover {
+    background:  #eee;
+}
+/* ArtBoard */
+div#inky-artboard {
+    width: calc(100% - 50px);
+    float: right;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05) inset;
+}
+div#inky-artboard canvas#artboard {
+	margin: 35px auto;
+	background: #fff;
+	display: block;
+	min-width: 90%;
+	max-width: 90%;
+	cursor: pointer;
+}
+/* Misc */
+.pull-right { float: right; }
+.pull-left { float: left; }
+.item-vertical { display: block; }
+.unstyle {list-style: none;margin: 0;padding: 0;}
