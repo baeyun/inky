@@ -18,11 +18,8 @@ a {
 }
 /* Header */
 div#inky-header {
-    padding: 0;
-    background: #fff;
-}
-div#inky-header * {
-    padding: 10px 15px;
+	padding: 7px;
+	background: #fff;
 }
 div#inky-header #inky-logo {
 	font-size: 28px;
@@ -87,6 +84,13 @@ div#inky-artboard canvas#artboard {
 	display:  block;
 }
 /**/
+ul#inky-nav {
+    display:  inline;
+    float: right;
+    margin:  0;
+    padding:  0;
+    font-size:  18px;
+}
 .nav {
 	display: inline;
 }
