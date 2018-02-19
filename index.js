@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 import Inky from './src/Inky'
 
-ReactDOM.render(
+ReactDOM.render((
 	<BrowserRouter>
 		<Inky />
-	</BrowserRouter>,
-document.getElementById('root'))
+	</BrowserRouter>
+), document.getElementById('root'))

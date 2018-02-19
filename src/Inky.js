@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Header from './Header'
 import Settings from './Settings'
-import MyArtBoards from './MyArtBoards'
-import ArtBoard from './ArtBoard'
+import Artboards from './Artboards'
+import Artboard from './Artboard'
 
 export default class Inky extends Component {
 	constructor(props) {
@@ -20,13 +20,17 @@ export default class Inky extends Component {
 			<div id="inky">
 			
 				<Header />
+
+				{/* Main Content */}
 				
 				<Switch>
-					<Route path={'/'} component={Settings} />
-					<Route path={'/settings'} component={MyArtBoards} />
-					<Route path={'/artboard'} component={ArtBoard} />
+					<Route exact path={'/'} component={Artboards} />
+					<Route exact path={'/settings'} component={Settings} />
+					<Route path={'/artboard'} component={Artboard} />
+					{/*<Route path={'/artboard'} component={Artboards}>
+											<Route path={'/:boardID'} component={Artboard} />
+										</Route>*/}
 				</Switch>
-
 
 			</div>
 		)

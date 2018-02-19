@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 import ActionsPanel from './ActionsPanel'
 
-import ArtBoardCtrl from './js/ArtBoardCtrl'
+import ArtboardCtrl from './js/ArtboardCtrl'
 
-export default class ArtBoard extends Component {
+export default class Artboard extends Component {
 	constructor(props) {
 		super(props)
 	}
@@ -12,14 +12,18 @@ export default class ArtBoard extends Component {
 	componentWillMount() {}
 
 	componentDidMount() {
-		// When all components are loaded to current...
-		let artboardCtrl = new ArtBoardCtrl()
+		// const { match: { params } } = this.props;
+
+		let artboardCtrl = new ArtboardCtrl()
+
+		// console.log(this.props.match)
 	}
 
 	render() {
 		return (
 			<div id="inky-artboard">
 				<ActionsPanel />
+				<h1 style={{marginLeft: '25px'}}>Artboard: {this.props.match.params.boardID}</h1>
 				<canvas id="artboard"></canvas>
 			</div>
 		)

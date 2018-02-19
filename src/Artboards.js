@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class MyArtBoards extends Component {
+export default class Artboards extends Component {
 	constructor(props) {
 		super(props)
 	}
@@ -11,7 +11,7 @@ export default class MyArtBoards extends Component {
 
 	render() {
 		return (
-			<div id="inky-my-art-boards" className="content" style={{width: '1200px'}}>
+			<div id="inky-artboards" className="content" style={{width: '1200px'}}>
 				<h1>My Artboards</h1>
 			</div>
 		)

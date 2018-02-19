@@ -27,6 +27,10 @@ module.exports = {
 		]
 	},
 
+	devServer: {
+		historyApiFallback: true,
+	},
+
 	// plugins: [
 	// 	new webpack.optimize.UglifyJsPlugin({
 	// 		include: /\.min\.js$/,
