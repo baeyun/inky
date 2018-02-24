@@ -12,18 +12,15 @@ export default class Artboard extends Component {
 	componentWillMount() {}
 
 	componentDidMount() {
-		// const { match: { params } } = this.props;
-
 		let artboardCtrl = new ArtboardCtrl()
-
-		// console.log(this.props.match)
 	}
 
 	render() {
+		const { params } = this.props.match
+		
 		return (
 			<div id="inky-artboard">
 				<ActionsPanel />
-				<h1 style={{marginLeft: '25px'}}>Artboard: {this.props.match.params.boardID}</h1>
 				<canvas id="artboard"></canvas>
 			</div>
 		)

@@ -7,29 +7,19 @@ import Artboards from './Artboards'
 import Artboard from './Artboard'
 
 export default class Inky extends Component {
-	constructor(props) {
-		super(props)
-	}
-
-	componentWillMount() {}
-
-	componentDidMount() {}
-
 	render() {
 		return (
 			<div id="inky">
 			
 				<Header />
 
-				{/* Main Content */}
+				{/* Routes */}
 				
 				<Switch>
 					<Route exact path={'/'} component={Artboards} />
 					<Route exact path={'/settings'} component={Settings} />
-					<Route path={'/artboard'} component={Artboard} />
-					{/*<Route path={'/artboard'} component={Artboards}>
-											<Route path={'/:boardID'} component={Artboard} />
-										</Route>*/}
+					<Route exact path={'/artboards'} component={Artboards} />
+					<Route path={'/artboards/:boardID'} component={Artboard} />
 				</Switch>
 
 			</div>

@@ -48,7 +48,7 @@ export default class ArtBoardCtrl {
 
 				ctx.lineWidth = 5;
 				ctx.lineCap = 'round';
-				ctx.strokeStyle = '#888';
+				ctx.strokeStyle = '#03A9F4';
 
 				ctx.moveTo(pos.x, pos.y); // from
 				setPosition(e);

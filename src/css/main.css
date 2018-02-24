@@ -20,6 +20,7 @@ a {
 div#inky-header {
 	padding: 7px;
 	background: #fff;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05);
 }
 div#inky-header #inky-logo {
 	font-size: 28px;
@@ -28,6 +29,27 @@ div#inky-header #inky-logo {
 }
 div#inky-header #inky-logo i {
 	color: #5ce794;
+}
+/* Artboards */
+/* Artboard Thumbnails */
+.artboard-thumb {
+    width: 33.333%;
+    padding: 10px;
+    display: inline-block;
+}
+/* ArtBoard */
+div#inky-artboard {
+    width: calc(100% - 50px);
+    float: right;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05) inset;
+}
+div#inky-artboard canvas#artboard {
+	margin: 35px auto;
+	background: #fff;
+	display: block;
+	min-width: 90%;
+	max-width: 90%;
+	cursor: pointer;
 }
 /* Actions Panel */
 div#inky-action-bar {
@@ -52,20 +74,6 @@ div#inky-action-bar {
 }
 .action-item:hover {
     background:  #eee;
-}
-/* ArtBoard */
-div#inky-artboard {
-    width: calc(100% - 50px);
-    float: right;
-    box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05) inset;
-}
-div#inky-artboard canvas#artboard {
-	margin: 35px auto;
-	background: #fff;
-	display: block;
-	min-width: 90%;
-	max-width: 90%;
-	cursor: pointer;
 }
 /* Settings */
 
