@@ -27,7 +27,7 @@ export default class Artboards extends Component {
 					return (
 						<div key={id} className="artboard-thumb">
 							<h3>
-								<Link to={`/artboards/${id}`} children={artboard.title} />
+								<Link to={`/artboards/edit/${id}`} children={artboard.title} />
 							</h3>
 						</div>
 					)

@@ -4,7 +4,7 @@ import ActionsPanel from './ActionsPanel'
 
 import ArtboardCtrl from './js/ArtboardCtrl'
 
-export default class Artboard extends Component {
+export default class ArtboardEdit extends Component {
 	constructor(props) {
 		super(props)
 	}
