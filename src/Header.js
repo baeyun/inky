@@ -24,7 +24,7 @@ export default class Header extends Component {
 						<Link to='/artboards'><i className="fa fa-plus" /> <span children="New" /></Link>
 					</li>
 					<li className="nav-item" title="Inky Settings">
-						<Link to='/settings'><i className="fa fa-cog" /></Link>
+						<Link to='/user'><i className="fa fa-user" /></Link>
 					</li>
 				</ul>
 

@@ -13,10 +13,6 @@ export default class Artboards extends Component {
 		}
 	}
 
-	componentWillMount() {}
-
-	componentDidMount() {}
-
 	render() {
 		const { artboards } = this.state
 		
