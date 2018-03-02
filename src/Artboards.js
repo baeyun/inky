@@ -14,20 +14,20 @@ export default class Artboards extends Component {
 	}
 
 	render() {
-		const { artboards } = this.state
+		let artboards = this.props.artboards
 		
 		return (
 			<div id="inky-artboards" className="content" style={{width: '1200px', textAlign: 'center'}}>
 				<h1>My Artboards</h1>
 				
-				{ // Loop
-				Object.keys(artboards).map(id => {
-					let artboard = artboards[id]
+				{ // @todo handle if artboards empty
+				Object.keys(artboards).map(ID => {
+					let artboard = artboards[ID]
 
 					return (
-						<div key={id} className="artboard-thumb">
+						<div key={ID} className="artboard-thumb">
 							<h3>
-								<Link to={`/artboards/edit/${id}`} children={artboard.title} />
+								<Link to={`/artboards/edit/${ID}`} children={artboard.title} />
 							</h3>
 						</div>
 					)

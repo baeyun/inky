@@ -17,17 +17,17 @@ a {
 	text-decoration: none;
 }
 /* Header */
-div#inky-header {
+#inky-header {
 	padding: 7px;
 	background: #fff;
 	box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05);
 }
-div#inky-header #inky-logo {
+#inky-header #inky-logo {
 	font-size: 28px;
 	padding: 0;
 	margin:  0;
 }
-div#inky-header #inky-logo i {
+#inky-header #inky-logo i {
 	color: #5ce794;
 }
 /* Artboards */
@@ -38,12 +38,12 @@ div#inky-header #inky-logo i {
     display: inline-block;
 }
 /* ArtBoard */
-div#inky-artboard {
+#inky-artboard {
     width: calc(100% - 50px);
     float: right;
     box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05) inset;
 }
-div#inky-artboard canvas#artboard {
+#inky-artboard canvas#artboard {
 	margin: 35px auto;
 	background: #fff;
 	display: block;
@@ -52,7 +52,7 @@ div#inky-artboard canvas#artboard {
 	cursor: pointer;
 }
 /* Actions Panel */
-div#inky-action-bar {
+#inky-action-bar {
 	position:  absolute;
 	left: 0;
 	bottom:  0;
@@ -75,21 +75,13 @@ div#inky-action-bar {
 .action-item:hover {
     background:  #eee;
 }
-/* Settings */
-
-/* Misc */
-.pull-right { float: right; }
-.pull-left { float: left; }
-.item-vertical { display: block; }
-.unstyle {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-.content {
-	width: 960px;
-	margin:  0 auto;
-	display:  block;
+/* ArtboardNew */
+#inky-artboardnew > form {
+	padding: 30px 15px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05);
 }
 /* Header nav */
 ul#inky-nav {
@@ -127,4 +119,23 @@ ul#inky-nav {
 	to, 100% {
 		transform: rotateZ(360deg);
 	}
+}
+/* Misc */
+.pull-right { float: right; }
+.pull-left { float: left; }
+.item-vertical { display: block; }
+.unstyle {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.content {
+	width: 960px;
+	margin:  0 auto;
+	display:  block;
+}
+input[type="text"] {
+	border-radius: 3px;
+	border: 2px solid #eee;
+	padding: 7px 12px;
 }

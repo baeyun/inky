@@ -6,11 +6,60 @@ import Header from './Header'
 import User from './User'
 
 import Artboards from './Artboards'
-import ArtboardEdit from './ArtboardEdit'
 // import ArtboardView from './ArtboardView'
-// import ArtboardNew from './ArtboardNew'
+import ArtboardNew from './ArtboardNew'
+import ArtboardEdit from './ArtboardEdit'
 
 export default class Inky extends Component {
+	constructor(props) {
+		super(props)
+
+		// Initialize the single source of truth
+		this.state = {
+			artboards: {}
+		}
+	}
+
+	componentWillMount() {
+		/**
+		 * Main Database
+		 */
+
+		// Handle no-support error
+		if (!window.indexedDB) {
+			let errMsg = 'WARNING: IndexedDB support is required for Noty to store notes locally. No support results in data loss.'
+			// debug
+			throw new ReferenceError(errMsg)
+			// user
+			alert(errMsg)
+
+			return
+		}
+
+		// Create database
+		this.DB = window.indexedDB.open('InkyDB', 1)
+
+		// Setup schema
+		this.DB.onupgradeneeded = (e) => {
+			let db = e.target.result,
+				notesObjectStore = db.createObjectStore('artboards', { keyPath: 'id', autoIncrement: true })
+		}
+
+		// Populate this.state.artboards in DESC order
+		this.DB.onsuccess = (e) => {
+			let db = e.target.result,
+				artboardsObjectStore = db.transaction(['artboards']).objectStore('artboards'),
+				artboards = artboardsObjectStore.getAll()
+
+			artboards.onsuccess = (e) => {
+				// Sort by latest
+				this.setState({
+					artboards: artboards.result.reverse()
+				})
+			}
+		}
+	}
+
 	render() {
 		return (
 			<div id="inky">
@@ -20,10 +69,18 @@ export default class Inky extends Component {
 				{/* Set routes */}
 				
 				<Switch>
-					<Route exact path={'/'} component={Artboards} />
 					<Route exact path={'/user'} component={User} />
 					
-					<Route exact path={'/artboards'} component={Artboards} />
+					<Route
+						exact
+						path={'/(|artboards)' /* For both the root and '/artboards' path */}
+						render={(props) => <Artboards {...props} artboards={this.state.artboards} />}
+					/>
+					<Route
+						exact
+						path={'/artboards/new'}
+						render={(props) => <ArtboardNew {...props} DB={this.DB} />}
+					/>
 					<Route path={'/artboards/edit/:boardID'} component={ArtboardEdit} />
 					
 					{/*<Route path={'/artboards/edit/:boardID'} component={ArtboardEdit} />
