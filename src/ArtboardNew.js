@@ -41,7 +41,7 @@ export default class ArtboardNew extends Component {
 					<br />
 					<div>
 						<label for="bgColor" children="Artboard background color" style={{marginRight: '10px'}} />
-						<input id="bgColor" type="color" ref="bgColor" />
+						<input id="bgColor" type="color" ref="bgColor" value="#ffffff" />
 					</div>
 					<br />
 					<button type="submit"><i className="fa fa-plus" /> Add</button>
